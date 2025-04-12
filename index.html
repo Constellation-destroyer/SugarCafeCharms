@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SugarCafeCharms - Handmade Clay Charms & Trinkets</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="global.css">
+    <link rel="stylesheet" href="header.css">
+    <link rel="stylesheet" href="hero.css">
+    <link rel="stylesheet" href="featured.css">
+    <link rel="stylesheet" href="welcome.css">
+    <link rel="stylesheet" href="categories.css">
+    <link rel="stylesheet" href="buttons.css">
+    <link rel="stylesheet" href="process.css">
+    <link rel="stylesheet" href="meet-the-creator.css">
+    <link rel="stylesheet" href="new-releases.css">
+    <link rel="stylesheet" href="newsletter.css">
+    <link rel="stylesheet" href="footer.css">
+    <link rel="stylesheet" href="responsive.css">
+    </head>
+<body>
+    <div id="header-container"></div>
+    <div id="hero-container"></div>
+    <div id="featured-container"></div>
+    <div id="welcome-container"></div>
+    <div id="meet-the-creator-container"></div> <div id="categories-container"></div>
+    <div id="process-container"></div>
+    <div id="new-releases-container"></div>
+    <div id="newsletters-container"></div>
+    <div id="footer-container"></div>
+
+    <script>
+        async function loadContent(url, containerId) {
+            try {
+                const response = await fetch(url);
+                const html = await response.text();
+                document.getElementById(containerId).innerHTML = html;
+            } catch (error) {
+                console.error(`Failed to load content from ${url}:`, error);
+                document.getElementById(containerId).innerHTML = '<p>Failed to load this section.</p>';
+            }
+        }
+
+        document.addEventListener('DOMContentLoaded', () => {
+            loadContent('header.html', 'header-container');
+            loadContent('hero.html', 'hero-container');
+            loadContent('featured.html', 'featured-container');
+            loadContent('welcome.html', 'welcome-container');
+            loadContent('meet-the-creator.html', 'meet-the-creator-container'); // Load the new section
+            loadContent('categories.html', 'categories-container');
+            loadContent('process.html', 'process-container');
+            loadContent('new-releases.html', 'new-releases-container');
+            loadContent('newsletter.html', 'newsletter-container');
+            loadContent('footer.html', 'footer-container');
+        });
+    </script>
+    </body>
+</html>

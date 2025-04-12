@@ -1,0 +1,19 @@
+/* General button style used throughout site */
+.btn {
+    background-color: var(--pink);
+    color: white;
+    border: none;
+    padding: 12px 30px;
+    border-radius: 30px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-decoration: none;
+    display: inline-block;
+}
+
+.btn:hover {
+    background-color: #ff85a2; /* Brighter pink on hover */
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(255, 133, 162, 0.4);
+}

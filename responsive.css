@@ -1,0 +1,287 @@
+
+/* Default styles (Mobile-First) -  Apply to ALL screens unless overridden */
+.featured-grid,
+.categories-grid,
+.process-grid,
+.releases-grid,
+.footer-grid {
+    display: grid;
+    grid-template-columns: 1fr; /* Start with one column on small screens */
+    gap: 20px; /* Add gap for spacing between grid items */
+}
+
+.hero-content h1 {
+    font-size: 1.8rem; /* Keep this, good for mobile */
+    margin-bottom: 1rem;
+}
+
+.newsletter-form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 95%; /* Use percentage for width */
+    margin: 0 auto; /* Center the form */
+}
+
+.newsletter-input,
+.newsletter-btn {
+    border-radius: 30px;
+    width: 100%;
+    padding: 10px;
+    box-sizing: border-box; /* Include padding in width/height */
+}
+
+.header-top {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    text-align: center;
+    padding: 10px;
+}
+
+.header-icons {
+    display: flex;
+    gap: 10px;
+    justify-content: center; /* Center icons on small screens */
+}
+
+nav {
+    padding: 10px 0;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.nav-links {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+    padding: 0;
+    margin: 0;
+}
+
+.nav-links a {
+    padding: 10px 20px;
+    border-radius: 25px;
+    width: 100%;
+    text-align: center;
+    box-sizing: border-box;
+}
+
+/* --- Meet the Creator Section --- */
+.meet-the-creator {
+    background-color: var(--mint); /* Mint green background */
+    padding: 40px 20px;
+    display: flex;
+    justify-content: center;
+}
+
+.meet-the-creator-banner {
+    background-color: white;
+    border-radius: 15px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column; /* Stack image and text on small screens */
+    align-items: center;
+    gap: 20px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.meet-the-creator-image-container {
+    width: 90%; /* Use percentage for responsiveness */
+    max-width: 250px; /* Max width for larger screens */
+    height: auto; /* Maintain aspect ratio */
+    aspect-ratio: 1 / 1;
+    border-radius: 15px;
+    overflow: hidden;
+    margin-bottom: 20px; /* Add space below image on small screens */
+}
+
+.meet-the-creator-carousel {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.meet-the-creator-carousel-inner {
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+.meet-the-creator-carousel-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.meet-the-creator-carousel-image.active {
+    opacity: 1;
+}
+
+.meet-the-creator-prev-button,
+.meet-the-creator-next-button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    color: var(--text-dark);
+    cursor: pointer;
+    padding: 10px;
+    z-index: 1;
+    opacity: 0.7;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.meet-the-creator-prev-button {
+    left: 10px;
+}
+
+.meet-the-creator-next-button {
+    right: 10px;
+}
+
+.meet-the-creator-info-combined {
+    flex-grow: 1;
+    text-align: center; /* Center text on small screens */
+}
+
+.meet-the-creator-info-combined h3 {
+    font-family: 'Comic Sans MS', cursive;
+    font-size: 1.8rem;
+    margin-bottom: 5px;
+}
+
+.meet-the-creator-info-combined .meet-the-creator-bio-short {
+    color: var(--text-light);
+    margin-bottom: 10px;
+    font-size: 1rem;
+}
+
+.meet-the-creator-info-combined .meet-the-creator-social-links {
+    display: flex;
+    justify-content: center; /* Center social links on small screens */
+    gap: 10px;
+    margin-bottom: 15px;
+}
+
+.meet-the-creator-info-combined .meet-the-creator-social-links a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 30px;
+    height: 30px;
+    background-color: var(--pink);
+    color: white;
+    border-radius: 50%;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+}
+
+.meet-the-creator-info-combined .meet-the-creator-social-links a:hover {
+    background-color: #ff85a2;
+    transform: translateY(-2px);
+}
+
+.meet-the-creator-info-combined .meet-the-creator-bio-long {
+    line-height: 1.6;
+    color: var(--text-dark);
+    margin-bottom: 15px;
+    font-size: 1rem;
+}
+
+
+/* --- Media Queries --- */
+
+/* Large Mobile (Landscape) */
+@media (min-width: 576px) {
+    .newsletter-form {
+        flex-direction: row; /* Restore side-by-side layout */
+    }
+
+    .newsletter-input,
+    .newsletter-btn {
+        width: auto; /* Adjust width as needed, or use flex-grow */
+    }
+     .nav-links {
+        flex-direction: row;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+    .nav-links a{
+        width: auto;
+    }
+    .meet-the-creator-banner {
+        flex-direction: row; /* Arrange image and text in a row on larger screens */
+        align-items: center;
+        text-align: left; /* Re-align text to the left on larger screens if desired */
+    }
+    .meet-the-creator-image-container{
+        margin-bottom: 0;
+        margin-right: 20px;
+        flex-shrink: 0;
+    }
+    .meet-the-creator-info-combined .meet-the-creator-social-links{
+        justify-content: flex-start;
+    }
+}
+
+/* Tablet */
+@media (min-width: 768px) {
+    .featured-grid,
+    .categories-grid,
+    .process-grid,
+    .footer-grid {
+        grid-template-columns: repeat(2, 1fr); /* 2 columns on tablets */
+    }
+
+    .releases-grid {
+        grid-template-columns: repeat(2, 1fr); /* 2 columns on tablets */
+    }
+     .nav-links {
+        flex-wrap: wrap;
+        justify-content: center; /* Center navigation links on tablets */
+    }
+    .nav-links a{
+        width: auto;
+    }
+}
+
+/* Small Desktop */
+@media (min-width: 992px) {
+    .featured-grid,
+    .categories-grid,
+    .process-grid,
+    .footer-grid {
+        grid-template-columns: repeat(3, 1fr); /* 3 columns on small desktops */
+    }
+
+    .releases-grid {
+        grid-template-columns: repeat(3, 1fr); /* 3 columns on small desktops */
+    }
+}
+
+/* Large Desktop */
+@media (min-width: 1200px) {
+    .featured-grid,
+    .categories-grid,
+    .process-grid,
+    .footer-grid {
+        grid-template-columns: repeat(4, 1fr); /* 4 columns on large desktops */
+    }
+
+    .releases-grid {
+        grid-template-columns: repeat(4, 1fr); /* Or keep 4, adjust as needed */
+    }
+}

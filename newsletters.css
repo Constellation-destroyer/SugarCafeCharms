@@ -1,0 +1,44 @@
+/* ---- NEWSLETTER ---- */
+.newsletter {
+    background-color: var(--lavender);
+    padding: 40px;
+    border-radius: 20px;
+    text-align: center;
+    margin: 60px 0;
+}
+
+.newsletter h2 {
+    font-family: 'Comic Sans MS', cursive;
+    margin-bottom: 20px;
+}
+
+.newsletter p {
+    margin-bottom: 20px;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.newsletter-form {
+    display: flex;
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+.newsletter-input {
+    flex-grow: 1;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 30px 0 0 30px;
+    font-size: 1rem;
+}
+
+.newsletter-btn {
+    background-color: #ff85a2;
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 0 30px 30px 0;
+    cursor: pointer;
+    font-weight: bold;
+}

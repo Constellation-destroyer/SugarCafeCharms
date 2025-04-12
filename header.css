@@ -1,0 +1,112 @@
+header {
+    background-color: #f8f8f8; /* Light background for the header */
+    padding: 10px 0;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+header .container {
+    max-width: 1200px; /* Or your preferred max-width */
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.header-top {
+    display: flex;
+    justify-content: space-between; /* Pushes logo and right side to edges */
+    align-items: center; /* Vertically centers items */
+    flex-wrap: wrap; /* Allows items to wrap on smaller screens */
+    gap: 10px;
+}
+
+.header-top .logo {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #333;
+    text-decoration: none;
+    order: 1; /* Ensure logo is first in source order */
+}
+
+.header-top .logo span {
+    color: var(--pink); /* Consistent with your design */
+}
+
+.header-right {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    order: 2;
+}
+
+.header-search {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.header-search input {
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 25px;
+    width: 200px; /* Increased width of search bar */
+    font-size: 0.9rem;
+    transition: width 0.3s ease; /* Smooth transition on width change */
+}
+
+.header-search input:focus {
+    outline: none;
+    border-color: var(--pink);
+    width: 250px; /* Expand on focus for better usability */
+}
+
+.header-search button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    font-size: 1rem;
+    color: #333;
+}
+
+.header-icons {
+    display: flex;
+    gap: 15px;
+}
+
+.header-icons a {
+    color: #555;
+    font-size: 1.2rem;
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+.header-icons a:hover {
+    color: var(--pink);
+}
+
+nav {
+    padding: 10px 0;
+}
+
+.nav-links {
+    display: flex;
+    justify-content: center; /* Centers nav links */
+    flex-wrap: wrap;
+    gap: 15px;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.nav-links li a {
+    color: #333;
+    text-decoration: none;
+    padding: 10px 15px;
+    border-radius: 25px;
+    transition: all 0.2s ease;
+    font-size: 1rem;
+}
+
+.nav-links li a:hover {
+    background-color: var(--pink);
+    color: white;
+}

@@ -1,0 +1,45 @@
+/* ---- PROCESS SECTION ---- */
+.process {
+    background-color: var(--yellow);
+    padding: 60px 0;
+    margin: 60px 0;
+    border-radius: 20px;
+}
+
+.process-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr)); /* Responsive columns */
+    gap: 40px;
+    align-items: center;
+}
+
+.process-content h2 {
+    font-family: 'Comic Sans MS', cursive;
+    margin-bottom: 20px;
+    font-size: 2rem;
+}
+
+.process-step {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 20px;
+}
+
+.step-number {
+    background-color: white;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 15px;
+    font-weight: bold;
+    flex-shrink: 0;
+}
+
+.process-img {
+    width: 100%;
+    border-radius: 20px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+}

@@ -1,0 +1,37 @@
+/* ---- VARIABLES ---- */
+:root {
+    /* Color palette - pastels */
+    --pink: #ffd1dc;
+    --blue: #c5e3f6;
+    --mint: #c9f7e6;
+    --lavender: #e6d7f5;
+    --yellow: #fff1c5;
+    --text-dark: #5a5a5a;
+    --text-light: #8a8a8a;
+    --card-bg: #fff; /* Uniform background color for cards */
+}
+
+/* ---- GLOBAL STYLES ---- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    /* Subtle striped background pattern */
+    background-color: #fcfcfc;
+    background-image: linear-gradient(90deg, rgba(255, 209, 220, 0.3) 50%, transparent 50%),
+                      linear-gradient(rgba(255, 209, 220, 0.3) 50%, transparent 50%);
+    background-size: 20px 20px;
+    color: var(--text-dark);
+}
+
+/* Container for content width control */
+.container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
