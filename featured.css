@@ -1,25 +1,27 @@
 /* ---- FEATURED COLLECTIONS ---- */
 .featured {
-    margin: 60px 0;
+    margin: 60px auto;  /* Auto margins will center the section */
+    max-width: 1200px;   /* Prevents it from stretching too wide */
+    padding: 0 20px;     /* Adds padding to both sides for some space */
 }
 
 .featured-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Responsive columns */
     gap: 20px;
+    justify-items: center;
 }
 
 .featured-item {
-    background-color: var(--blue);
+    background-color: var(--lavender);
     padding: 30px;
     border-radius: 20px;
     text-align: center;
     transition: all 0.3s ease;
 }
 
-/* Different pastel background for each featured item */
 .featured-item:nth-child(2) {
-    background-color: var(--mint);
+    background-color: var(--lavender);
 }
 
 .featured-item:nth-child(3) {

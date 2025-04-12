@@ -245,7 +245,10 @@ nav {
     .footer-grid {
         grid-template-columns: repeat(2, 1fr); /* 2 columns on tablets */
     }
-
+    .featured-grid {
+        justify-items: center;
+    }
+    
     .releases-grid {
         grid-template-columns: repeat(2, 1fr); /* 2 columns on tablets */
     }
@@ -270,7 +273,12 @@ nav {
     .releases-grid {
         grid-template-columns: repeat(3, 1fr); /* 3 columns on small desktops */
     }
+    .featured-grid {
+        justify-items: center;
+    }
+    
 }
+
 
 /* Large Desktop */
 @media (min-width: 1200px) {
@@ -284,4 +292,9 @@ nav {
     .releases-grid {
         grid-template-columns: repeat(4, 1fr); /* Or keep 4, adjust as needed */
     }
+
+    .featured-grid {
+        justify-items: center;
+    }
+    
 }
