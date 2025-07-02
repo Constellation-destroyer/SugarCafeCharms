@@ -1,13 +1,14 @@
 header {
-    background-color: #f8f8f8; /* Light background for the header */
-    padding: 10px 0;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    background-color: #f8f8f8;
+    padding: 5px 0; 
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
+
 header .container {
-    max-width: 1200px; /* Or your preferred max-width */
+    max-width: 1400px; /* Or your preferred max-width */
     margin: 0 auto;
-    padding: 0 20px;
+    padding: 0;
 }
 
 .header-top {
@@ -15,7 +16,7 @@ header .container {
     justify-content: space-between; /* Pushes logo and right side to edges */
     align-items: center; /* Vertically centers items */
     flex-wrap: wrap; /* Allows items to wrap on smaller screens */
-    gap: 10px;
+    padding: 5px 0;
 }
 
 .header-top .logo {
@@ -23,23 +24,18 @@ header .container {
     font-weight: bold;
     color: #333;
     text-decoration: none;
-    order: 1; /* Ensure logo is first in source order */
+    margin: 0;
+    display: inline-block;
 }
 
 .header-top .logo span {
     color: var(--pink); /* Consistent with your design */
 }
 
-.header-right {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    order: 2;
-}
 
 .header-search {
     display: flex;
-    align-items: center;
+    align-items: right;
     gap: 5px;
 }
 
@@ -69,8 +65,11 @@ header .container {
 
 .header-icons {
     display: flex;
-    gap: 15px;
+    align-items: center;
+    gap: 20px;
+    margin-left: auto; /* Pushes icons to the right */
 }
+
 
 .header-icons a {
     color: #555;

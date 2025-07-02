@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SugarCafeCharms - Handmade Clay Charms & Trinkets</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="../Frontend/HomePage/CSS/global.css">
+    <link rel="stylesheet" href="../Frontend/HomePage/CSS/header.css">
+    <link rel="stylesheet" href="../Frontend/HomePage/CSS/hero.css">
+    <link rel="stylesheet" href="../Frontend/HomePage/CSS/featured.css">
+    <link rel="stylesheet" href="../Frontend/HomePage/CSS/welcome.css">
+    <link rel="stylesheet" href="../Frontend/HomePage/CSS/categories.css">
+    <link rel="stylesheet" href="../Frontend/HomePage/CSS/buttons.css">
+    <link rel="stylesheet" href="../Frontend/HomePage/CSS/process.css">
+    <link rel="stylesheet" href="../Frontend/HomePage/CSS/meet-the-creator.css">
+    <link rel="stylesheet" href="../Frontend/HomePage/CSS/new-releases.css">
+    <link rel="stylesheet" href="../Frontend/HomePage/CSS/newsletter.css">
+    <link rel="stylesheet" href="../Frontend/HomePage/CSS/footer.css">
+    <link rel="stylesheet" href="../Frontend/HomePage/CSS/responsive.css">
+    </head>
+<body>
+    <div id="header-container"></div>
+    <div id="hero-container"></div>
+    <div id="featured-container"></div>
+    <div id="welcome-container"></div>
+    <div id="meet-the-creator-container"></div> <div id="categories-container"></div>
+    <div id="process-container"></div>
+    <div id="new-releases-container"></div>
+    <div id="newsletters-container"></div>
+    <div id="footer-container"></div>
+
+    <script>
+        async function loadContent(url, containerId) {
+            try {
+                const response = await fetch(url);
+                const html = await response.text();
+                document.getElementById(containerId).innerHTML = html;
+            } catch (error) {
+                console.error(`Failed to load content from ${url}:`, error);
+                document.getElementById(containerId).innerHTML = '<p>Failed to load this section.</p>';
+            }
+        }
+
+        document.addEventListener('DOMContentLoaded', () => {
+            loadContent('HomePage/html/header.html', 'header-container');
+            loadContent('HomePage/html/hero.html', 'hero-container');
+            loadContent('HomePage/html/featured.html', 'featured-container');
+            loadContent('HomePage/html/welcome.html', 'welcome-container');
+            loadContent('HomePage/html/meet-the-creator.html', 'meet-the-creator-container'); // Load the new section
+            loadContent('HomePage/html/categories.html', 'categories-container');
+            loadContent('HomePage/html/process.html', 'process-container');
+            loadContent('HomePage/html/new-releases.html', 'new-releases-container');
+            loadContent('HomePage/html/newsletter.html', 'newsletter-container');
+            loadContent('HomePage/html/footer.html', 'footer-container');
+        });
+    </script>
+    </body>
+</html>

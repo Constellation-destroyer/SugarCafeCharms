@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Shop | SugarCafeCharms</title>
+
+  <!-- Global styles reused from homepage -->
+  <link rel="stylesheet" href="../HomePage/CSS/global.css">
+  <link rel="stylesheet" href="../HomePage/CSS/header.css">
+  <link rel="stylesheet" href="../HomePage/CSS/footer.css">
+  <link rel="stylesheet" href="../HomePage/CSS/responsive.css">
+
+  <!-- Shop-specific blue theme overrides -->
+  <link rel="stylesheet" href="/Frontend/Shop/Shop.CSS">
+
+  <!-- Font Awesome for icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body class="shop-theme">
+  <!-- Reusable Header -->
+  <div id="header-container"></div>
+
+  <!-- Main Shop Content -->
+  <main class="container">
+    <div class="product-grid">
+      <div class="product-card">
+        <img src="./images/product1.jpg" alt="Pink Bunny Charm">
+        <h3>Pink Bunny Charm</h3>
+        <p>₹150</p>
+        <button>Buy Now</button>
+      </div>
+
+      <div class="product-card">
+        <img src="./images/product2.jpg" alt="Strawberry Milk Carton">
+        <h3>Strawberry Milk Carton</h3>
+        <p>₹180</p>
+        <button>Buy Now</button>
+      </div>
+      <!-- Add more products  -->
+    </div>
+  </main>
+
+  <!-- Reusable Footer -->
+  <div id="footer-container"></div>
+
+  <!-- Header/Footer load script -->
+  <script>
+    async function loadContent(url, containerId) {
+      try {
+        const res = await fetch(url);
+        const html = await res.text();
+        document.getElementById(containerId).innerHTML = html;
+      } catch (err) {
+        console.error(`Error loading ${url}:`, err);
+      }
+    }
+
+    document.addEventListener('DOMContentLoaded', () => {
+      loadContent('../HomePage/html/header.html', 'header-container');
+      loadContent('../HomePage/html/footer.html', 'footer-container');
+    });
+  </script>
+</body>
+</html>

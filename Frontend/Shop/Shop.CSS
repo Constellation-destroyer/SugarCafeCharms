@@ -1,0 +1,114 @@
+/* Blue Theme Overrides */
+:root {
+  --pink: #c5e3f6;
+  --highlight: #a2d2f7;
+}
+
+body.shop-theme {
+  background-color: #e0f4ff;
+  background-image: linear-gradient(
+      90deg,
+      rgba(197, 227, 246, 0.3) 50%,
+      transparent 50%
+    ),
+    linear-gradient(
+      rgba(197, 227, 246, 0.3) 50%,
+      transparent 50%
+    );
+  background-size: 20px 20px;
+}
+
+
+.shop-theme header {
+  background-color: #ffffff;
+}
+
+.shop-theme .header-top .logo span {
+  color: var(--highlight);
+}
+
+.shop-theme .nav-links li a:hover {
+  background-color: var(--highlight);
+  color: white;
+}
+
+.shop-theme footer {
+  background-color: #ffffff;
+  color: #333;
+}
+
+/* Shop Page Layout */
+.shop-heading {
+  text-align: center;
+  font-size: 2.2rem;
+  margin: 40px 0 20px;
+  color: #333;
+}
+
+.product-grid {
+  margin-top: 40px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 30px;
+  padding: 0 20px 40px;
+}
+
+.product-card {
+  background-color: #fff;
+  border-radius: 20px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  text-align: center;
+  padding: 20px;
+  transition: transform 0.2s ease;
+}
+
+.product-card img {
+  width: 100%;
+  height: auto;
+  border-radius: 15px;
+  margin-bottom: 10px;
+}
+
+.product-card h3 {
+  font-size: 1.2rem;
+  color: #333;
+  margin-bottom: 5px;
+}
+
+.product-card p {
+  font-weight: bold;
+  color: var(--highlight);
+  margin-bottom: 10px;
+}
+
+.product-card button {
+  padding: 8px 16px;
+  background-color: var(--highlight);
+  color: white;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.product-card button:hover {
+  background-color: #98cbea;
+}
+
+.product-card button {
+  padding: 8px 16px;
+  background-color: var(--highlight);
+  color: white;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+.product-card button:hover {
+    background-color: #65b7ea; 
+    transform: translateY(-3px);
+     box-shadow: 0 5px 15px rgba(82, 164, 215, 0.4);;
+}
+
