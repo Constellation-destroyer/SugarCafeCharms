@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>About | SugarCafeCharms</title>
+
+  <!-- Global styles reused from homepage -->
+  <link rel="stylesheet" href="../HomePage/CSS/global.css">
+  <link rel="stylesheet" href="../HomePage/CSS/header.css">
+  <link rel="stylesheet" href="../HomePage/CSS/footer.css">
+  <link rel="stylesheet" href="../HomePage/CSS/responsive.css">
+
+  <!-- About-specific mint theme -->
+  <link rel="stylesheet" href="/Frontend/About/about.css">
+
+  <!-- Font Awesome for icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body class="about-theme">
+  <!-- Reusable Header -->
+  <div id="header-container"></div>
+
+  <!-- About Content -->
+  <main class="container">
+    <section class="about-section">
+      <h2>About SugarCafeCharms</h2>
+      <p>
+        SugarCafeCharms is a cozy little clay studio run by a quiet creator in India, 
+        crafting handmade trinkets filled with love, pastels, and a sprinkle of magic. 
+        Each charm tells a story — soft, cutesy, and uniquely yours. Whether it’s a tiny 
+        bunny, a dreamy milk carton, or your custom fantasy idea, we’re here to bring it 
+        to life, one charm at a time.
+      </p>
+    </section>
+  </main>
+
+  <!-- Reusable Footer -->
+  <div id="footer-container"></div>
+
+  <!-- Header/Footer load script -->
+  <script>
+    const base = location.hostname.includes("github.io")
+      ? "/SugarCafeCharms/"
+      : "";
+
+    async function loadContent(url, containerId) {
+      try {
+        const response = await fetch(base + url);
+        const html = await response.text();
+        document.getElementById(containerId).innerHTML = html;
+      } catch (error) {
+        console.error(`Failed to load content from ${base + url}:`, error);
+        document.getElementById(containerId).innerHTML = '<p>Failed to load this section.</p>';
+      }
+    }
+
+    document.addEventListener('DOMContentLoaded', () => {
+      loadContent('../HomePage/HTML/header.html', 'header-container');
+      loadContent('../HomePage/HTML/footer.html', 'footer-container');
+    });
+  </script>
+</body>
+</html>
