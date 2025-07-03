@@ -37,6 +37,19 @@ body.shop-theme {
   color: #333;
 }
 
+.shop-theme footer a:hover {
+  color: #65b7ea;
+}
+.shop-theme footer a {
+  transition: color 0.3s ease;
+}
+.shop-theme footer .logo span {
+  color: var(--highlight);
+}
+.shop-theme .social-links a:hover {
+  background-color: #65b7ea;
+  color: white;
+}
 /* Shop Page Layout */
 .shop-heading {
   text-align: center;
@@ -49,7 +62,7 @@ body.shop-theme {
   margin-top: 40px;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  gap: 30px;
+  gap: 80px;
   padding: 0 20px 40px;
 }
 
@@ -60,12 +73,16 @@ body.shop-theme {
   text-align: center;
   padding: 20px;
   transition: transform 0.2s ease;
+  max-width: 290px; /* optional: just a bit wider than the image */
+  box-sizing: border-box;
+  margin: auto;
 }
 
 .product-card img {
-  width: 100%;
-  height: auto;
-  border-radius: 15px;
+    width: 250px; 
+    height: 250px; 
+    border-radius: 15px; 
+    overflow: hidden;
   margin-bottom: 10px;
 }
 
@@ -81,20 +98,6 @@ body.shop-theme {
   margin-bottom: 10px;
 }
 
-.product-card button {
-  padding: 8px 16px;
-  background-color: var(--highlight);
-  color: white;
-  border: none;
-  border-radius: 25px;
-  cursor: pointer;
-  font-weight: bold;
-  transition: background-color 0.3s ease;
-}
-
-.product-card button:hover {
-  background-color: #98cbea;
-}
 
 .product-card button {
   padding: 8px 16px;
