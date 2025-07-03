@@ -5,19 +5,36 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SugarCafeCharms - Handmade Clay Charms & Trinkets</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="stylesheet" href="/Frontend/HomePage/CSS/global.css">
-    <link rel="stylesheet" href="/Frontend/HomePage/CSS/header.css">
-    <link rel="stylesheet" href="/Frontend/HomePage/CSS/hero.css">
-    <link rel="stylesheet" href="/Frontend/HomePage/CSS/featured.css">
-    <link rel="stylesheet" href="/Frontend/HomePage/CSS/welcome.css">
-    <link rel="stylesheet" href="/Frontend/HomePage/CSS/categories.css">
-    <link rel="stylesheet" href="/Frontend/HomePage/CSS/buttons.css">
-    <link rel="stylesheet" href="/Frontend/HomePage/CSS/process.css">
-    <link rel="stylesheet" href="/Frontend/HomePage/CSS/meet-the-creator.css">
-    <link rel="stylesheet" href="/Frontend/HomePage/CSS/new-releases.css">
-    <link rel="stylesheet" href="/Frontend/HomePage/CSS/newsletter.css">
-    <link rel="stylesheet" href="/Frontend/HomePage/CSS/footer.css">
-    <link rel="stylesheet" href="/Frontend/HomePage/CSS/responsive.css">
+    
+  <!--  Dynamic CSS Loader -->
+  <script>
+    const cssBase = location.hostname.includes("github.io")
+      ? "/SugarCafeCharms/"
+      : "";
+
+    const stylesheets = [
+      "Frontend/HomePage/CSS/global.css",
+      "Frontend/HomePage/CSS/header.css",
+      "Frontend/HomePage/CSS/hero.css",
+      "Frontend/HomePage/CSS/featured.css",
+      "Frontend/HomePage/CSS/welcome.css",
+      "Frontend/HomePage/CSS/categories.css",
+      "Frontend/HomePage/CSS/buttons.css",
+      "Frontend/HomePage/CSS/process.css",
+      "Frontend/HomePage/CSS/meet-the-creator.css",
+      "Frontend/HomePage/CSS/new-releases.css",
+      "Frontend/HomePage/CSS/newsletter.css",
+      "Frontend/HomePage/CSS/footer.css",
+      "Frontend/HomePage/CSS/responsive.css"
+    ];
+
+    stylesheets.forEach(file => {
+      const link = document.createElement("link");
+      link.rel = "stylesheet";
+      link.href = cssBase + file;
+      document.head.appendChild(link);
+    });
+  </script>
     </head>
 <body>
     <div id="header-container"></div>
