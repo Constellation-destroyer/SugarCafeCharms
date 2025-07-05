@@ -82,10 +82,12 @@ nav {
 }
 /* Burger Menu Button  */
 .burger-menu {
-    display: flex;
+    display: none;
     flex-direction: column;
     cursor: pointer;
     padding: 10px;
+    z-index: 1001;
+    position: relative;
     background: transparent;
     border: none;
     outline: none;
@@ -99,6 +101,7 @@ nav {
     transition: 0.3s;
     border-radius: 2px;
     display: block;
+    order: 0;
 }
 
 .burger-menu:hover span {
@@ -122,8 +125,8 @@ nav {
   }
 
   .burger-menu {
-    justify-self: start;
     display: flex;
+    order: -1; 
     flex-direction: column;
     cursor: pointer;
     padding: 10px;
