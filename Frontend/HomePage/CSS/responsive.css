@@ -298,3 +298,162 @@ nav {
     }
     
 }
+
+/*  RESPONSIVE OVERRIDES ===== */
+
+/* Mobile First - Default styles for all screens */
+.categories-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr) !important; /* Force 2 columns on mobile */
+    gap: 15px;
+    justify-content: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 10px;
+}
+
+.releases-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr) !important; /* Force 2 columns on mobile */
+    gap: 15px;
+    justify-content: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 10px;
+}
+
+.category-item {
+    height: 180px; 
+    max-width: 100%;
+    border-radius: 15px;
+}
+
+.category-img {
+    border-radius: 15px;
+}
+
+.category-overlay {
+    padding: 10px;
+}
+
+.category-overlay h3 {
+    font-size: 0.9rem;
+}
+
+.product-card {
+    border-radius: 15px;
+}
+
+.product-img {
+    height: 150px; 
+}
+
+.product-info {
+    padding: 12px;
+    gap: 3px;
+}
+
+.product-title {
+    font-size: 0.9rem;
+}
+
+.product-price {
+    font-size: 0.9rem;
+}
+
+.rating {
+    font-size: 0.8rem;
+}
+
+.section-title {
+    font-size: 1.6rem;
+    margin-bottom: 20px;
+}
+
+.categories,
+.new-releases {
+    margin: 40px auto;
+    padding: 0 10px;
+}
+
+/* ===== RESPONSIVE BREAKPOINTS ===== */
+
+/* Large Mobile (Landscape)*/
+@media (min-width: 576px) {
+    .categories-grid,
+    .releases-grid {
+        gap: 18px;
+        padding: 0 15px;
+    }
+    
+    .category-item {
+        height: 200px;
+    }
+    
+    .product-img {
+        height: 170px;
+    }
+    
+    .product-info {
+        padding: 15px;
+    }
+    
+    .product-title,
+    .product-price {
+        font-size: 1rem;
+    }
+    
+    .section-title {
+        font-size: 1.8rem;
+    }
+    
+    .categories,
+    .new-releases {
+        padding: 0 15px;
+    }
+}
+
+/* Tablet - 768px and up */
+@media (min-width: 768px) {
+    .categories-grid{
+        grid-template-columns: repeat(3, 1fr) !important; /* 3 columns on tablets */
+        gap: 20px;
+        padding: 0 1rem;
+    }
+    
+    .category-item {
+        height: 220px;
+        border-radius: 18px;
+    }
+    
+    .category-img {
+        border-radius: 18px;
+    }
+    
+    .category-overlay {
+        padding: 12px;
+    }
+    
+    .category-overlay h3 {
+        font-size: 1rem;
+    }
+    
+    .product-img {
+        height: 180px;
+    }
+    
+    .product-info {
+        padding: 16px;
+        gap: 4px;
+    }
+    
+    .section-title {
+        font-size: 2rem;
+        margin-bottom: 30px;
+    }
+    
+    .categories {
+        margin: 50px auto;
+        padding: 0 20px;
+    }
+}
