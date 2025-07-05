@@ -37,6 +37,8 @@
 
   <!-- Reusable Footer -->
   <div id="footer-container"></div>
+  <script src="/Frontend/HomePage/JS/burger.js"></script>
+
 
   <!-- Header/Footer load script -->
   <script>
@@ -44,11 +46,12 @@
       ? "/SugarCafeCharms/"
       : "";
 
-    async function loadContent(url, containerId) {
+    async function loadContent(url, containerId, callback) {
       try {
         const response = await fetch(base + url);
         const html = await response.text();
         document.getElementById(containerId).innerHTML = html;
+        if (callback) callback();
       } catch (error) {
         console.error(`Failed to load content from ${base + url}:`, error);
         document.getElementById(containerId).innerHTML = '<p>Failed to load this section.</p>';
@@ -56,7 +59,7 @@
     }
 
     document.addEventListener('DOMContentLoaded', () => {
-      loadContent('../HomePage/HTML/header.html', 'header-container');
+      loadContent('../HomePage/HTML/header.html', 'header-container', initializeBurgerMenu);
       loadContent('../HomePage/HTML/footer.html', 'footer-container');
     });
   </script>
