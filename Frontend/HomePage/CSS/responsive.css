@@ -3,7 +3,6 @@
 .featured-grid,
 .categories-grid,
 .process-grid,
-.releases-grid,
 .footer-grid {
     display: grid;
     grid-template-columns: 1fr; /* Start with one column on small screens */
@@ -249,9 +248,6 @@ nav {
         justify-items: center;
     }
     
-    .releases-grid {
-        grid-template-columns: repeat(2, 1fr); /* 2 columns on tablets */
-    }
      .nav-links {
         flex-wrap: wrap;
         justify-content: center; /* Center navigation links on tablets */
@@ -270,9 +266,6 @@ nav {
         grid-template-columns: repeat(3, 1fr); /* 3 columns on small desktops */
     }
 
-    .releases-grid {
-        grid-template-columns: repeat(3, 1fr); /* 3 columns on small desktops */
-    }
     .featured-grid {
         justify-items: center;
     }
@@ -303,16 +296,6 @@ nav {
 
 /* Mobile First - Default styles for all screens */
 .categories-grid {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr) !important; /* Force 2 columns on mobile */
-    gap: 15px;
-    justify-content: center;
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 10px;
-}
-
-.releases-grid {
     display: grid;
     grid-template-columns: repeat(2, 1fr) !important; /* Force 2 columns on mobile */
     gap: 15px;
@@ -370,8 +353,7 @@ nav {
     margin-bottom: 20px;
 }
 
-.categories,
-.new-releases {
+.categories{
     margin: 40px auto;
     padding: 0 10px;
 }
