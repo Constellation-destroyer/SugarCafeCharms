@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Custom Order | SugarCafeCharms</title>
+
+  <!-- Global Styles -->
+  <link rel="stylesheet" href="../HomePage/CSS/global.css">
+  <link rel="stylesheet" href="../HomePage/CSS/header.css">
+  <link rel="stylesheet" href="../HomePage/CSS/footer.css">
+  <link rel="stylesheet" href="../HomePage/CSS/responsive.css">
+
+    <!-- About-specific mint theme -->
+  <link rel="stylesheet" href="/Frontend/CustomPage/Custom.css">
+
+  <!-- Font Awesome for icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+
+</head>
+<body class="custom-theme">
+  <!-- Reusable Header -->
+  <div id="header-container"></div>
+
+  <!-- Custom Order Form -->
+  <main>
+    <div class="custom-container">
+      <h2>Custom Order Request</h2>
+      <form class="custom-form" action="https://formspree.io/f/YOUR_FORM_ID" method="POST" enctype="multipart/form-data">
+        <label for="name">Your Name *</label>
+        <input type="text" id="name" name="name" required>
+
+        <label for="email">Email Address *</label>
+        <input type="email" id="email" name="email" required>
+
+        <label for="charmType">Type of Charm</label>
+        <select id="charmType" name="charmType">
+          <option value="Keychain">Keychain</option>
+          <option value="Earrings">Earrings</option>
+          <option value="Figurine">Figurine</option>
+          <option value="Other">Other</option>
+        </select>
+
+        <label for="description">Describe Your Custom Charm *</label>
+        <textarea id="description" name="description" placeholder="Colors, size, style, characters, etc." required></textarea>
+
+        <label for="reference">Reference Image (optional)</label>
+        <input type="file" id="reference" name="reference" accept="image/*">
+
+        <button type="submit">Send Custom Request</button>
+      </form>
+    </div>
+  </main>
+
+  <!-- Reusable Footer -->
+  <div id="footer-container"></div>
+
+  <!-- JS for header/footer and burger menu -->
+  <script src="/Frontend/HomePage/JS/burger.js"></script>
+  <script>
+    const base = location.hostname.includes("github.io") ? "/SugarCafeCharms/" : "";
+
+    async function loadContent(url, containerId, callback) {
+      try {
+        const response = await fetch(base + url);
+        const html = await response.text();
+        document.getElementById(containerId).innerHTML = html;
+        if (callback) callback();
+      } catch (error) {
+        console.error(`Failed to load content from ${base + url}:`, error);
+      }
+    }
+
+    document.addEventListener("DOMContentLoaded", () => {
+      loadContent("../HomePage/HTML/header.html", "header-container", initializeBurgerMenu);
+      loadContent("../HomePage/HTML/footer.html", "footer-container");
+    });
+  </script>
+</body>
+</html>
